@@ -1,0 +1,11 @@
+The first problem was that the script used the wrong file name and had no error handling. This was fixed by using the correct file name and adding a check to show a clear error if the file is missing.
+
+The second problem was that duplicates were not actually removed because the method was not applied. This was fixed by using inplace=True so duplicates are removed properly.
+
+The third problem was that the script created a new date column instead of converting the existing one. This was fixed by converting the transaction_date column directly.
+
+The fourth problem was that the script kept negative quantities. This was fixed by keeping only rows where the quantity are positive.
+
+The fifth problem was that total revenue was calculated by adding unit price and quantity. This was fixed by multiplying unit price by quantity.
+
+The sixth problem was that revenue was grouped by product ID instead of product name. This was fixed by grouping by product name.
